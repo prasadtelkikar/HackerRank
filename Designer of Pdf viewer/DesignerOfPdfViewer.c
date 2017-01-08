@@ -1,4 +1,4 @@
- #include <math.h>
+#include <math.h>
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -6,20 +6,20 @@
 #include <limits.h>
 #include <stdbool.h>
 
-int GetMaxHight(char * word, int *h){
-    int maxWidth = 0, count = 0;  
+int GetMaxHeight(char * word, int *h){
+    int maxHeight = 0, count = 0;  
     int index[10];
     while (*word){
         index[count] = *word - 'a' + 1;  //Get position of alphabet in A to Z
         count ++; word++;
     }
-    maxWidth = h[index[0] - 1];
+    maxHeight = h[index[0] - 1];
     
     for(int i = 1; i < count; i++){     //find max width
-        if(maxWidth < h[index[i] - 1])
-            maxWidth = h[index[i] - 1];
+        if(maxHeight < h[index[i] - 1])
+            maxHeight = h[index[i] - 1];
     }
-    return maxWidth;
+    return maxHeight;
 }
 
 int main(){
@@ -33,8 +33,9 @@ int main(){
     char* word = (char *)malloc(512000 * sizeof(char));
     scanf("%s",  word);
     
-    int maxHeight = GetMaxHight(word, h);    //Funtion to get maximum height of a letter 
+    int maxHeight = GetMaxHeight(word, h);    //Funtion to get maximum height of a letter 
     int lengthOfWords = strlen(word);        //width of letters
+    
     printf("%d", maxHeight * lengthOfWords); //area = height * width
     return 0;
 }
