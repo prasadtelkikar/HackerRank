@@ -15,17 +15,16 @@ public class Candy {
             c[c_i] = in.nextInt();
         }
         int result = 0;
-        int tempN = n - c[0];;
-        for(int i = 1; i < t -1; i++){
-                tempN -= c[i];
-            
-                 if(tempN < 5){
-                    int sub = (n - tempN);
-                    result += sub;
-                    tempN += sub;    
-                     
-                 }   
-        }
+        int temp = n;
+        for(int i = 0; i < t -1; i++){
+             temp -= c[i];
+            if(temp < 5){
+                int sub = (n - temp);
+                result += sub;
+                
+                temp += sub;    
+            }   
+        }   
         System.out.println(result);
     }
 }
