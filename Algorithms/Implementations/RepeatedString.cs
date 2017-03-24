@@ -4,27 +4,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/* Sample Input 0:
+ * aba
+ * 10
+ * 
+ * Sample output 0:
+ * 7
+ */
+/*
+ * Sample Input 1:
+ * a
+ * 1000000000000
+ * 
+ * Sample output 1:
+ * 1000000000000
+ */
 namespace BreakingTheRecords
 {
+    /// <summary>
+    /// Repeated string
+    /// https://www.hackerrank.com/challenges/repeated-string
+    /// </summary>
     class RepeatedString
     {
-        /* Sample Input 0:
-         * aba
-         * 10
-         * 
-         * Sample output 0:
-         * 7
-         */
-        /*
-         * Sample Input 1:
-         * a
-         * 1000000000000
-         * 
-         * Sample output 1:
-         * 1000000000000
-         */
-
         public static void Main(string[] args)
         {
 

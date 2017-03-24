@@ -1,5 +1,19 @@
 ﻿/*Thank you Sung Kim for your help @http://www.slightedgecoder.com/ */
+/*Sample Input 1:
+* 9
+* 10 5 20 20 4 5 2 25 1
+*
+*Sample output 1:
+* 2 4
+*/
 
+/*Sample Input 1:
+ * 10
+ * 3 4 21 36 10 28 35 5 24 42
+ * 
+ *Sample output 1:
+ * 4 0
+ */
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,22 +22,10 @@ using System.Threading.Tasks;
 
 namespace BreakingTheRecords
 {
-    /*Sample Input 1:
-     * 9
-     * 10 5 20 20 4 5 2 25 1
-     *
-     *Sample output 1:
-     * 2 4
-     */
-
-    /*Sample Input 1:
-     * 10
-     * 3 4 21 36 10 28 35 5 24 42
-     * 
-     *Sample output 1:
-     * 4 0
-     */
-
+    /// <summary>
+    /// Breaking The Record
+    /// https://www.hackerrank.com/challenges/breaking-best-and-worst-records
+    /// </summary>
     class BreakingTheRecords
     {
         static void Main(string[] args)
