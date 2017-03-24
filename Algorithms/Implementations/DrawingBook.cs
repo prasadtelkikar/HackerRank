@@ -31,7 +31,7 @@ namespace Implementations
             int lastPage = Convert.ToInt32(Console.ReadLine());
             int pageNumber = Convert.ToInt32(Console.ReadLine());
             int turnFromStart = -1, turnFromEnd = 0, rightPage = 0, leftPage = 0, rem = 0;
-            //Iterate look from starting
+            //Iterate loop from starting
             while (rightPage < pageNumber && leftPage < pageNumber)
             {
                 turnFromStart++;
