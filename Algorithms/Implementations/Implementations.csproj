@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Implementations.CatAndMouse</StartupObject>
+    <StartupObject>Implementations.Cheated.DrawingBook</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="BreakingTheRecords.cs" />
     <Compile Include="CatAndMouse.cs" />
+    <Compile Include="Cheated\DrawingBook.cs" />
     <Compile Include="DrawingBook.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepeatedString.cs" />
