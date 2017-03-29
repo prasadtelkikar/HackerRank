@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,46 +12,56 @@ namespace Implementations
     {
         public static void Main(string[] arg)
         {
-            int size = Convert.ToInt32(Console.ReadLine());
-            int[] values = Array.ConvertAll(Console.ReadLine().Split(' '), Int32.Parse);
+            //int size = Convert.ToInt32(Console.ReadLine());
+            //string[] value_temp = Console.ReadLine().Split(' ');
+            //int[] values = Array.ConvertAll(value_temp, Int32.Parse);
 
-            int mid = (int)Math.Floor((decimal)size/2);
+            string[] s = File.ReadAllLines(@"D:\GitHub\HackerRank\Algorithms\Implementations\PickingNumbers.txt");
+            int size = Convert.ToInt32(s[0]);
+            
+            String[] value_temp = s[1].Split(' ');
+            int[] values = Array.ConvertAll(value_temp, Int32.Parse);
+            
+
             Array.Sort(values);
-            foreach (int i in values)
+
+            List<int> arrayList = new List<int>();
+            arrayList = values.ToList();
+
+            int count = 0;
+            List<int> resultArray = GetAbsoluteArray(arrayList, false);
+            foreach (int r in resultArray)
             {
-                Console.Write("\t"+i);
+                Console.WriteLine(r);
             }
 
-            int leftCount = GetLeftCount(values, mid);
-            int rightCount = GetRightCount(values, mid);
-
-            Console.WriteLine(leftCount+rightCount);
+            List<int> finalArray = GetAbsoluteArray(resultArray, true);
+            Console.WriteLine(finalArray.Count);
 
             Console.ReadKey();
         }
 
-        private static int GetRightCount(int[] values, int mid)
+        private static List<int> GetAbsoluteArray(List<int> values, bool isSecond)
         {
-            int count = 0;
-            for (int i = 0; i < mid; i++)
+            List<int> finalArrayList = new List<int>();
+            for (int i = 0; i < values.Count; i++)
             {
-                int absDiff = Math.Abs(values[mid] - values[i]);
-                if (absDiff <= 1)
-                    count++;
+                List<int> tempArrayList = new List<int>();
+                for (int j = 0; j < values.Count; j++)
+                {
+                    if (Math.Abs(values[i] - values[j]) <= 1)
+                    {
+                        tempArrayList.Add(values[j]);
+                    }
+                    if (isSecond && Math.Abs(values[i] - values[j]) > 1)
+                    {
+                        return tempArrayList;
+                    }
+                }
+                if (tempArrayList.Count > finalArrayList.Count)
+                    finalArrayList = tempArrayList;
             }
-            return count;
-        }
-
-        private static int GetLeftCount(int[] values, int mid)
-        {
-            int count = 0;
-            for (int i = mid + 1; i < values.Length; i++)
-            {
-                int absDiff = Math.Abs(values[mid] - values[i]);
-                if (absDiff <= 1)
-                    count++;
-            }
-            return count;
+            return finalArrayList;
         }
     }
 }
