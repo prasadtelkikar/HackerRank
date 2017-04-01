@@ -12,56 +12,44 @@ namespace Implementations
     {
         public static void Main(string[] arg)
         {
-            //int size = Convert.ToInt32(Console.ReadLine());
-            //string[] value_temp = Console.ReadLine().Split(' ');
-            //int[] values = Array.ConvertAll(value_temp, Int32.Parse);
-
-            string[] s = File.ReadAllLines(@"D:\GitHub\HackerRank\Algorithms\Implementations\PickingNumbers.txt");
-            int size = Convert.ToInt32(s[0]);
-            
-            String[] value_temp = s[1].Split(' ');
-            int[] values = Array.ConvertAll(value_temp, Int32.Parse);
-            
-
-            Array.Sort(values);
-
-            List<int> arrayList = new List<int>();
-            arrayList = values.ToList();
-
+             int size = Convert.ToInt32(Console.ReadLine());
+            string[] integerArray_temp = Console.ReadLine().Split(' ');
+            int[] integerArray = Array.ConvertAll(integerArray_temp, Int32.Parse);
             int count = 0;
-            List<int> resultArray = GetAbsoluteArray(arrayList, false);
-            foreach (int r in resultArray)
+
+            /* For input containing large number of values
+            
+             string[] intputs = File.ReadAllLines(Directory.GetCurrentDirectory()+ @"\PickingNumbers.txt");
+             int size = Convert.ToInt32(intputs[0]);
+             String[] integerArray_temp = intputs[1].Split(' ');
+             int[] integerArray = Array.ConvertAll(integerArray_temp, Int32.Parse);
+             int count = 0;
+            
+            */
+
+            Array.Sort(integerArray);
+            for (int i = 0; i < size; i++)
             {
-                Console.WriteLine(r);
+                int countInner = 0;
+                List<int> minDiffList = new List<int>();
+                for (int j = 0; j < size; j++)
+                {
+                    if (Math.Abs(integerArray[i] - integerArray[j]) <= 1 && IsSafe(minDiffList, integerArray[j]))
+                    {
+                        minDiffList.Add(integerArray[j]);
+                        countInner++;
+                    }
+                }
+                count = (count > countInner) ? count : countInner;
             }
 
-            List<int> finalArray = GetAbsoluteArray(resultArray, true);
-            Console.WriteLine(finalArray.Count);
-
+            Console.WriteLine(count);
             Console.ReadKey();
         }
 
-        private static List<int> GetAbsoluteArray(List<int> values, bool isSecond)
+        private static bool IsSafe(List<int> integerArray, int value)
         {
-            List<int> finalArrayList = new List<int>();
-            for (int i = 0; i < values.Count; i++)
-            {
-                List<int> tempArrayList = new List<int>();
-                for (int j = 0; j < values.Count; j++)
-                {
-                    if (Math.Abs(values[i] - values[j]) <= 1)
-                    {
-                        tempArrayList.Add(values[j]);
-                    }
-                    if (isSecond && Math.Abs(values[i] - values[j]) > 1)
-                    {
-                        return tempArrayList;
-                    }
-                }
-                if (tempArrayList.Count > finalArrayList.Count)
-                    finalArrayList = tempArrayList;
-            }
-            return finalArrayList;
+            return integerArray.All(absSum => Math.Abs(absSum - value) <= 1);
         }
     }
 }
