@@ -5,9 +5,23 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/* Sample input 0:
+ * 6
+ * 4 6 5 3 3 1
+ * Sample output 0:
+ * 3
+ * Sample input 1:
+ * 6
+ * 1 2 2 3 1 2
+ * Sample output 1:
+ * 5
+ */
 namespace Implementations
 {
+    /// <summary>
+    /// Picking numbers: Used absolute function from Math class and LINQ expression.
+    /// https://www.hackerrank.com/challenges/picking-numbers
+    /// </summary>
     class PickingNumber
     {
         public static void Main(string[] arg)

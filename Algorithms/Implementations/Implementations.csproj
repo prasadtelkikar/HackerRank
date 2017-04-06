@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Implementations.NonDivisibleSubset</StartupObject>
+    <StartupObject>Implementations.CountingValleys</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -61,13 +61,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BirthdayCakeCandles.cs" />
     <Compile Include="BonAppétit.cs" />
     <Compile Include="BreakingTheRecords.cs" />
     <Compile Include="CatAndMouse.cs" />
     <Compile Include="Cheated\DrawingBook.cs" />
     <Compile Include="CircularArrayRotation.cs" />
     <Compile Include="ClimbingTheLeaderboard.cs" />
+    <Compile Include="CountingValleys.cs" />
     <Compile Include="DrawingBook.cs" />
+    <Compile Include="Cheated\ElectronicsShop.cs" />
     <Compile Include="LibraryFines.cs" />
     <Compile Include="MigratoryBird.cs" />
     <Compile Include="NonDivisibleSubset.cs" />
@@ -79,6 +82,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Cheated\ElectronicsShop.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="PickingNumbers.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

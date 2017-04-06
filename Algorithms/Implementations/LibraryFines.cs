@@ -3,9 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/* Sample Input 0:
+ * 9 6 2015
+ * 6 6 2015
+ * Sample output 0:
+ * 45
+ */
 namespace Implementations
 {
+    /// <summary>
+    /// Library fines: Used date class to perform date operations.
+    /// https://www.hackerrank.com/challenges/library-fine
+    /// </summary>
     class LibraryFines
     {
         public static void Main(string[] args)

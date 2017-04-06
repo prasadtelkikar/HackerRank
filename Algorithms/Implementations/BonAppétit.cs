@@ -3,9 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/* Sample Input 0:
+ * 4 1
+ * 3 10 2 9
+ * 12
+ * Sample output 0:
+ * 5
+ * Sample Input 1:
+ * 4 1
+ * 3 10 2 9
+ * 7
+ * Sample output 1:
+ * Bon Appetit 
+ */
 namespace Implementations
 {
+    /// <summary>
+    /// Bon Appétit: used continue keyword to skip one iteration of for loop.
+    /// https://www.hackerrank.com/challenges/bon-appetit
+    /// </summary>
     class BonAppétit
     {
         public static void Main(String[] args)
