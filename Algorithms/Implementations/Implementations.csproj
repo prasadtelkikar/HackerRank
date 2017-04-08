@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Implementations.DivisiblePairsSum</StartupObject>
+    <StartupObject>Implementations.BitwiseAND</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BirthdayCakeCandles.cs" />
+    <Compile Include="BitwiseAND.cs" />
     <Compile Include="BonAppétit.cs" />
     <Compile Include="BreakingTheRecords.cs" />
     <Compile Include="CatAndMouse.cs" />
