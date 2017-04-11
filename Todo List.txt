@@ -1,12 +1,8 @@
 Incomplete problems:
     - Climbing The Leader board.
     - Non Divisible subset.
-    - Counting Valley.
     
 Todo or Saved challenges:
-    - Service Lane.
-    - Bitwise AND.
-    - Divisible Pairs Sum.
     - Magic Square Forming.
     - Beautiful Triplets.
     - Append and delete

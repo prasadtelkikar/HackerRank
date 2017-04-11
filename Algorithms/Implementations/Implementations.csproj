@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Implementations.BitwiseAND</StartupObject>
+    <StartupObject>Implementations.ServiceLane</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -75,10 +75,12 @@
     <Compile Include="Cheated\ElectronicsShop.cs" />
     <Compile Include="LibraryFines.cs" />
     <Compile Include="MigratoryBird.cs" />
+    <Compile Include="MinimumDistance.cs" />
     <Compile Include="NonDivisibleSubset.cs" />
     <Compile Include="PickingNumber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepeatedString.cs" />
+    <Compile Include="ServiceLane.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
