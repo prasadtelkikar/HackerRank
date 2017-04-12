@@ -33,7 +33,7 @@ namespace Contests.Week_of_Codes_31
 
                 for (int j = 0; j < n -1; j++)
                 {
-                    if ((Math.Abs(arr[j] - arr[j + 1]) == 1) && arr[i] > arr[i+1])
+                    if ((Math.Abs(arr[j] - arr[j + 1]) == 1) && arr[j] > arr[j+1])
                     {
                         int temp = arr[j];
                         arr[j] = arr[j + 1];

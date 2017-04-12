@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Implementations.ServiceLane</StartupObject>
+    <StartupObject>Implementations.FindAPoint</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Amey.cs" />
     <Compile Include="BirthdayCakeCandles.cs" />
     <Compile Include="BitwiseAND.cs" />
     <Compile Include="BonAppétit.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="NonDivisibleSubset.cs" />
     <Compile Include="PickingNumber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueensAttack.cs" />
     <Compile Include="RepeatedString.cs" />
     <Compile Include="ServiceLane.cs" />
   </ItemGroup>
@@ -92,6 +94,7 @@
     <Content Include="PickingNumbers.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="QueensAttack.txt" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
