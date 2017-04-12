@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Contests.Week_of_Codes_31.AccurateSorting</StartupObject>
+    <StartupObject>Contests.Week_of_Codes_31.ZeroOneGame</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,6 +49,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Week of Codes 31\AccurateSorting.cs" />
     <Compile Include="Week of Codes 31\BeautifulWord.cs" />
+    <Compile Include="Week of Codes 31\ZeroOneGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

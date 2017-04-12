@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Implementations.FindAPoint</StartupObject>
+    <StartupObject>Implementations.CatAndMouse</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -61,7 +61,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Amey.cs" />
     <Compile Include="BirthdayCakeCandles.cs" />
     <Compile Include="BitwiseAND.cs" />
     <Compile Include="BonAppétit.cs" />
