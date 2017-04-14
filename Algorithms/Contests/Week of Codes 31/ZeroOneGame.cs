@@ -22,7 +22,7 @@ namespace Contests.Week_of_Codes_31
     class ZeroOneGame
     {
         /// <summary>
-        /// Interesting problem: one 0 to n -1 for loop and one n-1 to 0 for loop solved this problem
+        /// Checked combinations of 0-1-0 and 0-0-0 to solve this problem
         /// https://www.hackerrank.com/contests/w31/challenges/zero-one-game
         /// </summary>
         public static void Main(String[] args)
@@ -33,31 +33,12 @@ namespace Contests.Week_of_Codes_31
             {
                 int size = Convert.ToInt32(Console.ReadLine());
                 string[] arrSequenceString = Console.ReadLine().Split(' ');
-                IList<int> sequence = Array.ConvertAll(arrSequenceString, Int32.Parse).ToList();
-
+                int[] sequence = Array.ConvertAll(arrSequenceString, Int32.Parse);
+                
                 int turn = 0;
-                for (int j = 0; j < sequence.Count; j++)
-                {
-                    if ((j == 0 || j == sequence.Count - 1))
-                        continue;
-
-                    if (sequence[j - 1] == 0 && sequence[j + 1] == 0)
-                    {
-                        sequence.RemoveAt(j);
-                        turn++;
-                    }
-                }
-                for (int j = sequence.Count - 1; j >= 0; j--)
-                {
-                    if ((j == 0 || j == sequence.Count - 1))
-                        continue;
-
-                    if (sequence[j - 1] == 0 && sequence[j + 1] == 0)
-                    {
-                        sequence.RemoveAt(j);
-                        turn++;
-                    }
-                }
+                turn = findOnes(sequence, size);
+                int[] tempArr = removeOnes(sequence, size, turn);
+                turn += findZeros(tempArr, tempArr.Length);
                 results.Add((turn % 2));
             }
 
@@ -65,6 +46,39 @@ namespace Contests.Week_of_Codes_31
             foreach (int result in results)
                 Console.WriteLine((result == 0) ? "Bob" : "Alice");
             Console.ReadKey();
+        }
+
+        private static int[] removeOnes(int[] sequence, int size, int turn)
+        {
+            List<int> tempArr = new List<int>();
+            for (int i = 1; i <= (size - 2); i++)
+                if (sequence[i - 1] == 0 && sequence[i] == 1 && sequence[i + 1] == 0)
+                    sequence[i] = -1;
+
+            for (int i = 0; i < size; i++)
+                if (sequence[i] != -1)
+                    tempArr.Add(sequence[i]);
+
+            return tempArr.ToArray();
+
+        }
+
+        private static int findOnes(int[] sequence, int size)
+        {
+            int count = 0;
+            for (int i = 1; i <= (size - 2); i++)
+                if (sequence[i - 1] == 0 && sequence[i] == 1 && sequence[i + 1] == 0)
+                    count++;
+            return count;
+        }
+
+        private static int findZeros(int[] sequence, int size)
+        {
+            int count = 0;
+            for(int i = 1; i <= (size-2);i++)
+                if (sequence[i - 1] == 0 && sequence[i] == 0 && sequence[i + 1] == 0)
+                    count++;
+            return count;
         }
     }
 }
