@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Implementations.QueensAttack</StartupObject>
+    <StartupObject>Implementations.BeautifulTriplet</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BeautifulTriplet.cs" />
     <Compile Include="BirthdayCakeCandles.cs" />
     <Compile Include="BitwiseAND.cs" />
     <Compile Include="BonAppétit.cs" />

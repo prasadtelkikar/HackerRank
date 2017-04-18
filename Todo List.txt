@@ -4,11 +4,11 @@ Incomplete problems:
     
 Todo or Saved challenges:
     - Magic Square Forming.
-    - Beautiful Triplets.
     - Append and delete
     - ACM ICPC Team.
-    - Queen's Attack.
     - Journey to the Moon
     - Coin change problem
     - Week of code 31: Spanning tree fraction 
-    
+
+Reduce time complexity / Refine logic:
+    - Beautiful Triplets.
