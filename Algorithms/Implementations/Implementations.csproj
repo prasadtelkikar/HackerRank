@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Implementations.BeautifulTriplet</StartupObject>
+    <StartupObject>Implementations.BirthdayChocolate</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="BeautifulTriplet.cs" />
     <Compile Include="BirthdayCakeCandles.cs" />
+    <Compile Include="BirthdayChocolate.cs" />
     <Compile Include="BitwiseAND.cs" />
     <Compile Include="BonAppétit.cs" />
     <Compile Include="BreakingTheRecords.cs" />
