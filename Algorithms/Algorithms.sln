@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Implementations", "Implemen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contests", "Contests\Contests.csproj", "{F03D357C-CA55-4723-9658-ADED98D3ED02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting", "Sorting\Sorting.csproj", "{2C0E174C-603B-45F3-B45A-E04BB3D04350}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F03D357C-CA55-4723-9658-ADED98D3ED02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F03D357C-CA55-4723-9658-ADED98D3ED02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F03D357C-CA55-4723-9658-ADED98D3ED02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C0E174C-603B-45F3-B45A-E04BB3D04350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C0E174C-603B-45F3-B45A-E04BB3D04350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C0E174C-603B-45F3-B45A-E04BB3D04350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C0E174C-603B-45F3-B45A-E04BB3D04350}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
