@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Sorting.Marc_s_Cakewalk</StartupObject>
+    <StartupObject>Sorting.AbsoluteDifference</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbsoluteDifference.cs" />
     <Compile Include="Marc%27s Cakewalk.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quicksort-1-Partition.cs" />
