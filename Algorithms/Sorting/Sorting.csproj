@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Sorting.Big_Sorting</StartupObject>
+    <StartupObject>Sorting.Find_The_Point</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="AbsoluteDifference.cs" />
     <Compile Include="Big Sorting.cs" />
+    <Compile Include="Find The Point.cs" />
+    <Compile Include="Insertion Sort - Part 1.cs" />
     <Compile Include="Luck Balance.cs" />
     <Compile Include="Marc%27s Cakewalk.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
