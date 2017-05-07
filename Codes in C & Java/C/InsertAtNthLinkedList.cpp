@@ -1,6 +1,17 @@
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
+/* https://www.hackerrank.com/challenges/maximum-draws
+	Insert node at nth position
+	5
+	3 0
+	5 1
+	4 2
+	2 3
+	10 1
+*/
+
+
 struct Node{
 	int data;
 	Node* next;
@@ -60,24 +71,22 @@ Node * InsertNth(Node* head, int data, int position){
 	Node* temp = (Node*) malloc(sizeof(Node));
 	temp -> data = data;
 	temp -> next = NULL;
-	
 	Node* currentNode = head;
-	Node* previousNode = NULL;
-	
-	while(position > 0){
-		previousNode = currentNode;
-		currentNode = currentNode -> next;
-		position--;
-	}
-	if(head == NULL)
+	int currentPosition = 0;
+	if(position == 0){
+		temp -> next = head;
 		head = temp;
-	else if(head -> next == NULL)
-	{
-		head -> next = temp;
+		return head;
 	}
 	else{
-		previousNode -> next = temp;
-		temp -> next = currentNode;	
+		while(currentNode != NULL){
+			currentPosition++;
+			if(currentPosition == position){
+				temp -> next = currentNode -> next;
+				currentNode -> next = temp;
+			}
+			currentNode = currentNode -> next;
+		}
 	}
 	return head;
 }

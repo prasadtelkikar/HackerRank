@@ -13,25 +13,41 @@ namespace Contests.RookieRank_3
             int size = Convert.ToInt32(Console.ReadLine());
             string[] arrString = Console.ReadLine().Split(' ');
             long[] arr = Array.ConvertAll(arrString, Int64.Parse);
+
             Array.Sort(arr);
-            long maxValue = Int32.MinValue;
+            long maxValue = -1;
+            int middle = (size) / 2;
+            long runningScore = 0;
+            long score = 0;
+            int[] visisted = new int[size];
             for (int i = 0; i < size; i++)
             {
-                long runningScore = 0, score = 0;
-                for (int j = i; j < size; j++)
+                if (runningScore == 0)
                 {
-                    score += (runningScore % arr[j]);
-                    runningScore += arr[j];
+                    score += (runningScore%arr[0]);
+                    runningScore += arr[0];
+                    visisted[0] = 1;
                 }
-                for (int k = 0; k < i; k++)
+                else
                 {
-                    score += (runningScore % arr[k]);
-                    runningScore += arr[k];
+                    if (arr[i] > runningScore && visisted[i] == 0)
+                    {
+                        score += (runningScore%arr[i]);
+                        runningScore += arr[i];
+                        visisted[i] = 1;
+                    }
                 }
-                if (maxValue < score)
-                    maxValue = score;
             }
-            Console.WriteLine(maxValue);
+            for (int i = 0; i < size; i++)
+            {
+                if (visisted[i] == 0)
+                {
+                    score += (runningScore%arr[i]);
+                    runningScore += arr[i];
+                    visisted[i] = 1;
+                } 
+            }
+            Console.WriteLine(score);
             Console.ReadKey();
         }
     }
