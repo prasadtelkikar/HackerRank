@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Contests.RookieRank_3.MaxScore</StartupObject>
+    <StartupObject>Contests.Week_of_Code_32.Duplication</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -51,6 +51,7 @@
     <Compile Include="RookieRank 3\FindTheBug.cs" />
     <Compile Include="RookieRank 3\MaximalTourism.cs" />
     <Compile Include="RookieRank 3\MaxScore.cs" />
+    <Compile Include="Week of Code 32\Duplication.cs" />
     <Compile Include="Week of Codes 31\AccurateSorting.cs" />
     <Compile Include="Week of Codes 31\BeautifulWord.cs" />
     <Compile Include="Week of Codes 31\SpanningTreeFraction.cs" />
