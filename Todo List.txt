@@ -12,3 +12,9 @@ Todo or Saved challenges:
 
 Reduce time complexity / Refine logic:
     - Beautiful Triplets.
+    
+    
+Contests:
+    Week of code 32:
+        - Circular walk
+        - GeometricTrick

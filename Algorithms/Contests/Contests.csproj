@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Contests.Week_of_Code_32.GeometricTrick</StartupObject>
+    <StartupObject>Contests._101_hack_49.CartesianCountry</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="101 hack 49\CalculateArraySize.cs" />
+    <Compile Include="101 hack 49\CartesianCountry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RookieRank 3\ComparingTimecs.cs" />
     <Compile Include="RookieRank 3\FindTheBug.cs" />
