@@ -59,7 +59,7 @@ namespace Contests._101_hack_49
                 long currentDiaSEY = queenY + (-1 * i);
                 if ((currentDiaNWX >= minX && currentDiaNWY <= maxY) && (currentDiaSEX <= maxX && currentDiaSEY >= minY))
                     count++;
-                if (minXdiff > 1 || minYdiff > 1)
+                if ((minXdiff > 1 || minYdiff > 1) && (maxX > queenX  && queenX > minX) && (maxY > queenY && queenY > minY))
                 {
                     long longDiaPosX = queenX + (minXdiff * 1 * i);
                     long longDiaPosY = queenY + (minYdiff * 1 * i);
