@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contests", "Contests\Contes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting", "Sorting\Sorting.csproj", "{2C0E174C-603B-45F3-B45A-E04BB3D04350}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Structures", "Data Structures", "{6CFBE39B-66DC-4FAA-9CB4-90692547E356}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{E5FFD0F0-204C-42DA-93EB-69B519C6134D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,8 +31,15 @@ Global
 		{2C0E174C-603B-45F3-B45A-E04BB3D04350}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C0E174C-603B-45F3-B45A-E04BB3D04350}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C0E174C-603B-45F3-B45A-E04BB3D04350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5FFD0F0-204C-42DA-93EB-69B519C6134D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5FFD0F0-204C-42DA-93EB-69B519C6134D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5FFD0F0-204C-42DA-93EB-69B519C6134D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5FFD0F0-204C-42DA-93EB-69B519C6134D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E5FFD0F0-204C-42DA-93EB-69B519C6134D} = {6CFBE39B-66DC-4FAA-9CB4-90692547E356}
 	EndGlobalSection
 EndGlobal
