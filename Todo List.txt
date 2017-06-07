@@ -1,6 +1,7 @@
 Incomplete problems:
     - Climbing The Leader board.
     - Non Divisible subset.
+    - Dynamic array
     
 Todo or Saved challenges:
     - Magic Square Forming.
