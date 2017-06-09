@@ -3,10 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
+ * Sample Inputs 0:
+ * 5 4
+ * 1 2 3 4 5
+ * Sample Output 0:
+ * 5 1 2 3 4
+ */
 namespace Arrays
 {
-    //TODO: Solve it with mod (%) operator
+    /// <summary>
+    /// Left Rotation
+    /// https://www.hackerrank.com/challenges/array-left-rotation
+    /// </summary>
     public class LeftRotation
     {
         public static void Main(string[] args)
@@ -16,18 +25,13 @@ namespace Arrays
 
             string[] arrString = Console.ReadLine().Split(' ');
             int[] arr = Array.ConvertAll(arrString, Int32.Parse);
-            int[] temp = new int[sizeShift[0]];
-            Array.Copy(arr, temp, sizeShift[1]);
-            
-            for (int i = 0; i < sizeShift[1]; i++)
+            int[] leftRotatedArray = new int[sizeShift[0]];
+
+            for (int i = 0; i < sizeShift[0]; i++)
             {
-                for (int j = 0; j < sizeShift[0] - 1; j++)
-                {
-                    arr[j] = arr[j + 1];
-                }
-                arr[sizeShift[0] - 1] = temp[i];
+                leftRotatedArray[i] = arr[(i + sizeShift[1]) % sizeShift[0]];
             }
-            foreach (int value in arr)
+            foreach (int value in leftRotatedArray)
             {
                 Console.Write(value + " ");
             }
