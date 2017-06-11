@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Arrays.SparseArray</StartupObject>
+    <StartupObject>Arrays.AlgorithmicCrush</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="2D Array - DS.cs" />
+    <Compile Include="AlgorithmicCrush.cs" />
     <Compile Include="BigSorting.cs" />
     <Compile Include="DynamicArray.cs" />
     <Compile Include="LeftRotation.cs" />
@@ -56,6 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Todo%27s.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

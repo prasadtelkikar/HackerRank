@@ -10,35 +10,31 @@ namespace Implementations
     {
         public static void Main(String[] args)
         {
-            string[] nkString = Console.ReadLine().Split(' ');
-            string[] setSString = Console.ReadLine().Split(' ');
+            string[] inputs = Console.ReadLine().Split(' ');
+            int length = Convert.ToInt32(inputs[0]);
+            int divisor = Convert.ToInt32(inputs[1]);
+            string[] stringArr = Console.ReadLine().Split(' ');
+            
+            int[] arr = Array.ConvertAll(stringArr, Int32.Parse);
+            int[] outputArr = new int[divisor];
 
-            int[] nk = Array.ConvertAll(nkString, Int32.Parse);
-            int[] setS = Array.ConvertAll(setSString, Int32.Parse);
-            List<int> setOfElements = new List<int>();
-            int count = 0;
-            for (int i = 0; i < nk[0]; i++)
+            foreach (int element in arr)
             {
-                int countInner = 0;
-                for (int j = 0; j < nk[0]; j++)
-                {
-                    int result = (setS[i] + setS[j])%nk[1];
-
-                    if (result != 0 && IsSafe(setOfElements, setS[j], nk[1]))
-                    {
-                        setOfElements.Add(setS[j]);
-                        countInner++;
-                    }
-                }
-                count = (countInner > count) ? countInner : count;
+                outputArr[(element%divisor)]++;
             }
-            Console.WriteLine(count);
-            Console.ReadKey();
-        }
+            int count = 0;
+            bool flag = true;
+            for (int i = 1; i <= divisor / 2; i++)
+            {
+                flag = false;
+                if (outputArr[i] > outputArr[divisor - i])
+                    count += outputArr[i];
+                else
+                    count += outputArr[divisor - i];
+            }
+            Console.WriteLine(flag ? 1 : count);
 
-        private static bool IsSafe(List<int> setOfElements, int value, int divisor)
-        {
-            return setOfElements.All(result => ((result + value)%divisor) != 0);
+            Console.ReadKey();
         }
     }
 }

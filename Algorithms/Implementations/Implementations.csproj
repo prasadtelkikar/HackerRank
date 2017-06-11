@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Implementations.MaximumDraws</StartupObject>
+    <StartupObject>Implementations.TheTimeInWords</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -85,6 +85,7 @@
     <Compile Include="QueensAttack.cs" />
     <Compile Include="RepeatedString.cs" />
     <Compile Include="ServiceLane.cs" />
+    <Compile Include="TheTimeInWords.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
