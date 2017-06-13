@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Arrays.AlgorithmicCrush</StartupObject>
+    <StartupObject>Arrays.BigSorting</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

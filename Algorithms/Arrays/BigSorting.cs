@@ -15,24 +15,10 @@ namespace Arrays
             {
                 bInt[i] = BigInteger.Parse(Console.ReadLine());
             }
-            for (int i = 0; i < size; i++)
-            {
-                bool flag = false;
-                for (int j = 0; j < size - i-1; j++)
-                {
-                    if (bInt[j] > bInt[j + 1])
-                    {
-                        flag = true;
-                        BigInteger temp = new BigInteger();
-                        temp = bInt[j];
-                        bInt[j] = bInt[j + 1];
-                        bInt[j + 1] = temp;
-                    }
-                }
-                if (!flag)
-                    break;
-            }
-            //Array.Sort(bInt);
+
+            //Quicksort with O(nLog n) time complexity
+            Array.Sort(bInt);
+
             foreach (var element in bInt)
             {
                 Console.WriteLine(element);
