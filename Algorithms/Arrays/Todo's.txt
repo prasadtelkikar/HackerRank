@@ -1,4 +1,3 @@
 ﻿Half done: (Priority wise)
  - Algorithmic Crush
- - Big Sorting
- - Dynamic Array
+ - Dynamic Array - try to solve it tomorrow date 06/21

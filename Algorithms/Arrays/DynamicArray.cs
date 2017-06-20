@@ -10,51 +10,39 @@ namespace Arrays
     {
         public static void Main(string[] args)
         {
-            string[] firstLine = Console.ReadLine().Split(' ');
-            int[] nq = Array.ConvertAll(firstLine, Int32.Parse);
-            int size = nq[0];
-            int sizeOfQueue = nq[1];
-            int[] Y = new int[sizeOfQueue];
-            int[] X = new int[sizeOfQueue];
-            int[] seqValue = new int[sizeOfQueue];
-            
-            for (int i = 0; i < sizeOfQueue; i++)
-            {
-                string[] nextLine = Console.ReadLine().Split(' ');
-                Y[i] = Convert.ToInt32(nextLine[0]);
-                X[i] = Convert.ToInt32(nextLine[1]);
-                seqValue[i] = Convert.ToInt32(nextLine[2]);
-            }
-
+            Dictionary<int, List<int>> seqList = new Dictionary<int, List<int>>();
             int lastAnswer = 0;
-            List<int> s1 = new List<int>();
-            List<int> s2 = new List<int>();
+            string[] nq = Console.ReadLine().Split(' ');
 
-            for (int i = 0; i < sizeOfQueue; i++)
+            int N = Convert.ToInt32(nq[0]);
+            int Q = Convert.ToInt32(nq[1]);
+            for (int i = 0; i < N; i++)
             {
-                int calc = (X[i] ^ lastAnswer)%size;
-                
-                if (Y[i] == 1)
+                List<int> emptyLinkedList = new List<int>();
+                seqList.Add(i, emptyLinkedList);
+            }
+            List<int> lastAnsList = new List<int>();
+            for (int i = 0; i < Q; i++)
+            {
+                string[] line = Console.ReadLine().Split(' ');
+                int queryType = Convert.ToInt32(line[0]);
+                int x = Convert.ToInt32(line[1]);
+                int y = Convert.ToInt32(line[2]);
+
+                int index = (x ^ lastAnswer)%N;
+                if(queryType == 1)
+                    seqList[index].Add(y);
+                if ( queryType == 2 )
                 {
-                    if (calc == 0)
-                        s1.Add(seqValue[i]);
-                    else
-                        s2.Add(seqValue[i]);
+                    int length = y%(seqList.Count);
+                    IList<int> list = seqList[index];
+                    lastAnswer = list[length];
+                    lastAnsList.Add(lastAnswer);
                 }
-                else
-                {
-                    if (calc == 0)
-                    {
-                        lastAnswer = s1[s1.Count - 1];
-                        Console.WriteLine(lastAnswer);
-                    }
-                    else
-                    {
-                        lastAnswer = s2[s2.Count - 1];
-                        Console.WriteLine(lastAnswer);
-                    }
-                        
-                }
+            }
+            foreach (var entity in lastAnsList)
+            {
+                Console.WriteLine(entity);
             }
             Console.ReadKey();
         }
