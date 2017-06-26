@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Sorting.Big_Sorting</StartupObject>
+    <StartupObject>Sorting.Insertion_Sort___Part_1</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
