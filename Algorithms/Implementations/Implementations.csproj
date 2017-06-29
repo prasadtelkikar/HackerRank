@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Implementations.TheTimeInWords</StartupObject>
+    <StartupObject>Implementations.DayOfTheProgrammer</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -72,6 +72,7 @@
     <Compile Include="CircularArrayRotation.cs" />
     <Compile Include="ClimbingTheLeaderboard.cs" />
     <Compile Include="CountingValleys.cs" />
+    <Compile Include="DayOfTheProgrammer.cs" />
     <Compile Include="DivisiblePairsSum.cs" />
     <Compile Include="DrawingBook.cs" />
     <Compile Include="Cheated\ElectronicsShop.cs" />
