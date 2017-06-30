@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Implementations.DayOfTheProgrammer</StartupObject>
+    <StartupObject>Implementations.ACMICPCTeam</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ACMICPCTeam.cs" />
     <Compile Include="BeautifulTriplet.cs" />
     <Compile Include="BirthdayCakeCandles.cs" />
     <Compile Include="BirthdayChocolate.cs" />

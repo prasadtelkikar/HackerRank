@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Contests.Week_of_code_33
@@ -18,6 +19,9 @@ namespace Contests.Week_of_code_33
                 int iCount = 0;
                 string input = Console.ReadLine();
                 int index = input.IndexOf('1');
+                //Using regex
+                //iCount = Regex.Matches(input, "10*1").Count;
+                
                 for (int j = index; j >= 0; j = input.IndexOf('1', j + 1))
                 {
 
