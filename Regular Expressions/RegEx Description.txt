@@ -1,0 +1,55 @@
+Regular expressions
+
+search for the word 'elvis' followed on the same line by the word 'alive'
+    - \belvis\b.*\balive\b  = \b word boundary
+                            = . Any character than \n
+                            = * zero or more occurrences
+                            
+Determine a valid mobile number
+lets take an example where mobile number is of 7 digits and it should be in XXX-XXXX format
+where X is digit
+Find seven digit mobile number
+    - \b\d\d\d-\d\d\d\d\b  = \b Word boundary
+                           = \d match any single digit
+                           = - no special symbol
+we can write above format in better sense
+    - \b{3}\d-{4}\d\b      = {3} followed by "\d" means "Repeat the preceding character for 3 times"
+
+Special characters (^ and $)
+    - Special characters used when we want to validate expressions 
+    - Something that must be starts at the beginning ^
+    - something that ends with $
+    
+    
+\ (backslash):
+    - \ backslash uses to remove the special meaning
+    - if we want to use ^ in regex string then use \^ instead of ^
+    
+    
+Repetation
+some syntax used to repeat entire subexpression
+    - * Repeat any number of times
+    - + Repeat one or more times
+    - ? repeat zero or one times
+    - {n} Repeat n times
+    - {n, m} Repeat atleast n times, but not more than m times
+    - {n,} Repeat atleast n times
+    
+    \b for word boundary
+    
+    * for zero or more occcurences
+    + for one or more occurences
+    . any character
+    
+    \d for matching single digit
+    \w for matching single alphabet
+    \s for matching white space
+    
+    ^ match the beginning of the string
+    $ match the end of the string
+Examples:
+\ba\w*\b = Find word which starts with above
+
+\b\d+\b = Find number which contains atleast one digit
+
+\b{6}\w\b = Find word of length 6
