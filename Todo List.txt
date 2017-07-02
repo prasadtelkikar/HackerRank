@@ -1,12 +1,10 @@
 Incomplete problems:
     - Climbing The Leader board.
     - Non Divisible subset.
-    - Dynamic array
     
 Todo or Saved challenges:
     - Magic Square Forming.
     - Append and delete
-    - ACM ICPC Team.
     - Journey to the Moon
     - Coin change problem
     - Week of code 31: Spanning tree fraction 

@@ -28,8 +28,7 @@ namespace Implementations
             double popCount = Math.Ceiling((desireOperation / 2.0));
             double pushCount = desireOperation - popCount;
             string endString = desireString.Substring(count);
-
-            //char[] result = new char[temp];
+            
             bool flag = true;
 
             for ( int i = 0; i < popCount; i++ )
@@ -70,12 +69,7 @@ namespace Implementations
                         }
                     }
                 }
-            Console.WriteLine(flag ? "Yes" : "No");
-            
-            //Console.WriteLine("Initial String" + secondHalf.ToArray().ToString());
-            //Console.WriteLine(desireString.Substring(count));
-            //Console.WriteLine(popCount);
-            //Console.WriteLine(pushCount);
+            Console.WriteLine(flag ? "Yes" : "No");            
             Console.ReadKey();
             }
         }
