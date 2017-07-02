@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Implementations.ACMICPCTeam</StartupObject>
+    <StartupObject>Implementations.AppendAndDelete</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ACMICPCTeam.cs" />
+    <Compile Include="AppendAndDelete.cs" />
     <Compile Include="BeautifulTriplet.cs" />
     <Compile Include="BirthdayCakeCandles.cs" />
     <Compile Include="BirthdayChocolate.cs" />
