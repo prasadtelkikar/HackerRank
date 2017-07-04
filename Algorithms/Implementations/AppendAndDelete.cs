@@ -11,65 +11,19 @@ namespace Implementations
             string desireString = Console.ReadLine();
             int desireOperation = Convert.ToInt32(Console.ReadLine());
             int count = 0;
-            Stack<char> secondHalf = new Stack<char>();
-
-            for ( int i = 0; i < initialString.Length; i++ )
+            int smallerString = (initialString.Length < desireString.Length)
+                ? initialString.Length
+                : desireString.Length;
+            for ( int i = 0; i < smallerString; i++ )
                 {
                 if ( initialString[i] != desireString[i] )
                     break;
                 count++;
                 }
+            string endInitialString = initialString.Substring(count);
+            string endDesireString = desireString.Substring(count);
 
-            for ( int i = count; i < initialString.Length; i++ )
-                {
-                secondHalf.Push(initialString[i]);
-                }
-
-            double popCount = Math.Ceiling((desireOperation / 2.0));
-            double pushCount = desireOperation - popCount;
-            string endString = desireString.Substring(count);
-            
-            bool flag = true;
-
-            for ( int i = 0; i < popCount; i++ )
-                {
-                if ( secondHalf.Count == 0 )
-                    continue;
-                secondHalf.Pop();
-                }
-            if ( string.IsNullOrEmpty(endString) )
-                {
-                for ( int i = 0; i < pushCount; i++ )
-                    {
-                    secondHalf.Push(desireString[i]);
-                    }
-                int temp = secondHalf.Count;
-                for ( int i = temp - 1; i >= 0; i-- )
-                    {
-                    if ( desireString[i] != secondHalf.Pop() )
-                        {
-                        flag = false;
-                        break;
-                        }
-                    }
-                }
-            else
-                {
-                for ( int i = 0; i < pushCount; i++ )
-                    {
-                    secondHalf.Push(endString[i]);
-                    }
-                int temp = secondHalf.Count;
-                for ( int i = temp - 1; i >= 0; i-- )
-                    {
-                    if ( endString[i] != secondHalf.Pop() )
-                        {
-                        flag = false;
-                        break;
-                        }
-                    }
-                }
-            Console.WriteLine(flag ? "Yes" : "No");            
+            Console.WriteLine(endInitialString.Length >= endDesireString.Length && (endInitialString.Length + endDesireString.Length <= desireOperation) ? "Yes" : "No");
             Console.ReadKey();
             }
         }
