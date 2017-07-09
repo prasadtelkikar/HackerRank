@@ -1,8 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
-
+/* Sample input 0:
+ * hackerhappy
+ * hackerrank
+ * 9
+ * Sample output 0:
+ * Yes
+ * 
+ * Sample input 1:
+ * aba
+ * aba
+ * 7
+ * Sample output 1:
+ * Yes
+ * 
+ * Test case input 3:
+ * zzzz
+ * zzzzzz
+ * 4
+ * Test case output 3:
+ * Yes
+ * 
+ * Test case input 7:
+ * y
+ * yo
+ * Test case output 7:
+ * No
+ */
 namespace Implementations
     {
+    /// <summary>
+    /// Append and delete
+    /// https://www.hackerrank.com/challenges/append-and-delete/problem
+    /// </summary>
     public class AppendAndDelete
         {
         public static void Main (string[] args)
@@ -20,10 +49,11 @@ namespace Implementations
                     break;
                 count++;
                 }
+
             string endInitialString = initialString.Substring(count);
             string endDesireString = desireString.Substring(count);
 
-            Console.WriteLine(endInitialString.Length >= endDesireString.Length && (endInitialString.Length + endDesireString.Length <= desireOperation) ? "Yes" : "No");
+            Console.WriteLine( (endDesireString.Length % 2 == 0 || endInitialString.Length >= endDesireString.Length) && (endInitialString.Length + endDesireString.Length <= desireOperation) ? "Yes" : "No");
             Console.ReadKey();
             }
         }
