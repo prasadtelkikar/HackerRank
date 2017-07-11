@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Stack.MaximumElements</StartupObject>
+    <StartupObject>Stack.EqualStacks</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BalancedBrackets.cs" />
+    <Compile Include="EqualStacks.cs" />
     <Compile Include="MaximumElements.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
