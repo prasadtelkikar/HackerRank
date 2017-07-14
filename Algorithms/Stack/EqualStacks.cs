@@ -14,7 +14,8 @@ namespace Stack
             int[] arrHeightArr = Array.ConvertAll(heightStringArr, Int32.Parse);
 
             string[] temp1 = Console.ReadLine().Split(' ');
-            int[] stackArr1 = Array.ConvertAll(temp1, Int32.Parse);
+
+            int[] stackArr1 = ConvertStringToArray(temp1);//Array.ConvertAll(temp1, Int32.Parse);
             Stack<int> stack1 = new Stack<int>(stackArr1.Length);
 
             string[] temp2 = Console.ReadLine().Split(' ');
@@ -33,6 +34,16 @@ namespace Stack
             Console.WriteLine(result);
             Console.ReadKey();
             }
+
+        private static int[] ConvertStringToArray(string[] temp1)
+        {
+            int temp = temp1.Length;
+            for (int i = 0; i < UPPER; i++)
+            {
+                
+            }
+            throw new NotImplementedException();
+        }
 
         private static int PopFromStack (Stack<int> stack1, Stack<int> stack2, Stack<int> stack3, int sum1, int sum2, int sum3)
             {
