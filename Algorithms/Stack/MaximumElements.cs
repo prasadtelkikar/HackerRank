@@ -12,30 +12,31 @@ namespace Stack
             {
             Stack<long> stack = new Stack<long>();
             int size = Convert.ToInt16(Console.ReadLine());
-            List<long> valueList = new List<long>();
+            string[] inputs = new string[size];
             for ( int i = 0; i < size; i++ )
                 {
-                string[] query = Console.ReadLine().Split(' ');
-                int type = Convert.ToInt32(query[0]);
-                
-                if ( type == 1 )
-                    {
-                    long value = Convert.ToInt64(query[1]);
+                inputs[i] = Console.ReadLine();
+                }
+
+            foreach ( string input in inputs )
+                {
+                string[] values = input.Split(' ');
+                int option = Convert.ToInt32(values[0]);
+
+                if ( option == 1 )
+                    { 
+                    long value = Convert.ToInt32(values[1]);
                     stack.Push(value);
                     }
-                else if ( type == 2 )
+                else if ( stack.Count != 0 && option == 2 )
                     {
                     stack.Pop();
                     }
-                else
+                else if ( option == 3 )
                     {
-                    valueList.Add(stack.Peek());
+                    long max = stack.Max();
+                    Console.WriteLine(max);
                     }
-
-                }
-            foreach ( var item in valueList )
-                {
-                Console.WriteLine(item);
                 }
             Console.ReadKey();
             }
