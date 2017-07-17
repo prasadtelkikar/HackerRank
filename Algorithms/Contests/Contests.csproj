@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Contests.Week_of_code_33.PatternCount</StartupObject>
+    <StartupObject>Contests.Week_of_Code_34.OnceInTram</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -60,6 +60,7 @@
     <Compile Include="Week of code 33\PatternCount.cs" />
     <Compile Include="Week of code 33\TransformToPalindrome.cs" />
     <Compile Include="Week of code 33\TwinArrays.cs" />
+    <Compile Include="Week of Code 34\OnceInTram.cs" />
     <Compile Include="Week of Codes 31\AccurateSorting.cs" />
     <Compile Include="Week of Codes 31\BeautifulWord.cs" />
     <Compile Include="Week of Codes 31\SpanningTreeFraction.cs" />

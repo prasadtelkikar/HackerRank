@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Implementations.AppendAndDelete</StartupObject>
+    <StartupObject>Implementations.ChocolateFeast</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -72,6 +72,7 @@
     <Compile Include="BreakingTheRecords.cs" />
     <Compile Include="CatAndMouse.cs" />
     <Compile Include="Cheated\DrawingBook.cs" />
+    <Compile Include="ChocolateFeast.cs" />
     <Compile Include="CircularArrayRotation.cs" />
     <Compile Include="ClimbingTheLeaderboard.cs" />
     <Compile Include="CountingValleys.cs" />
