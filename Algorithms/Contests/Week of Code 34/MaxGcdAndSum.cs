@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Contests.Week_of_Code_34
     {
@@ -15,49 +12,119 @@ namespace Contests.Week_of_Code_34
             string[] secondArrStr = Console.ReadLine().Split(' ');
             int[] firstArr = Array.ConvertAll(firstArrStr, Int32.Parse);
             int[] secondArr = Array.ConvertAll(secondArrStr, Int32.Parse);
-            int max = Int32.MinValue;
-            int sum = CalculateMaxGCD(firstArr, secondArr);
-            Console.WriteLine(sum);
+            Dictionary<int, List<int>> results = new Dictionary<int, List<int>>();
+            int maxFirst = 0, maxSecond = 0;
+            List<int> firstList = new List<int>();
+            List<int> secondList;
+            int maxKey = Int32.MinValue;
+
+            for ( int i = 0; i < size; i++ )
+                {
+                if ( firstList.Count == 0 || !firstList.Contains(firstArr[i]) )
+                    {
+                    firstList.Add(firstArr[i]);
+                    secondList = new List<int>();
+                    for ( int j = 0; j < size; j++ )
+                        {
+                        if ( secondList.Count == 0 || !secondList.Contains(secondArr[j]) )
+                            {
+                            secondList.Add(secondArr[j]);
+
+                            int gcd = FindGCD(firstArr[i], secondArr[j]);
+                            if ( !results.ContainsKey(gcd) )
+                                {
+                                if ( maxKey < gcd )
+                                    {
+                                    maxKey = gcd;
+                                    maxFirst = 0;
+                                    maxSecond = 0;
+                                    }
+                                List<int> list = new List<int>();
+                                list.Add(firstArr[i]);
+                                list.Add(secondArr[j]);
+                                results.Add(gcd, list);
+                                }
+                            else
+                                {
+                                if ( !results[gcd].Contains(firstArr[i]) )
+                                    {
+                                    results[gcd].Add(firstArr[i]);
+                                    }
+                                if ( !results[gcd].Contains(secondArr[j]) )
+                                    {
+                                    results[gcd].Add(secondArr[j]);
+                                    }
+                                }
+                            if ( gcd == maxKey )
+                                {
+                                if ( firstArr[i] > secondArr[j] )
+                                    {
+                                    if ( maxFirst == 0 && maxSecond == 0 )
+                                        {
+                                        maxFirst = firstArr[i];
+                                        maxSecond = secondArr[j];
+                                        }
+                                    else
+                                        {
+                                        if ( firstArr[i] > maxFirst )
+                                            {
+                                            maxSecond = maxFirst;
+                                            maxFirst = firstArr[i];
+                                            }
+                                        if ( firstArr[i] < maxFirst && firstArr[i] > maxSecond )
+                                            maxSecond = firstArr[i];
+                                        }
+                                    }
+                                else
+                                    {
+                                    if ( maxFirst == 0 && maxSecond == 0 )
+                                        {
+                                        maxFirst = secondArr[j];
+                                        maxSecond = firstArr[i];
+                                        }
+                                    else
+                                        {
+                                        if ( secondArr[j] > maxFirst )
+                                            {
+                                            maxSecond = maxFirst;
+                                            maxFirst = secondArr[j];
+                                            }
+                                        if ( secondArr[j] < maxFirst && secondArr[j] > maxSecond )
+                                            maxSecond = secondArr[j];
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            Console.WriteLine(maxFirst + maxSecond);
             Console.ReadLine();
             }
 
-        private static int CalculateMaxGCD (int[] firstArr, int[] secondArr)
+        private static int FindGCD (int x, int y)
             {
-            int finalResult = 0;
-            int max = Int32.MinValue;
-            int valueOfJthElement = 0;
-            for ( int i = 0; i < firstArr.Length; i++ )
+            int numerator = 0;
+            int denominator = 0;
+            int remainder = 0;
+            if ( x > y )
                 {
-                int maxGCD = Int32.MinValue;
-                for ( int j = 0; j < firstArr.Length; j++ )
-                    {
-                    int result = GetGCD(firstArr[i], secondArr[j]);
-                    if ( maxGCD < result )
-                        {
-                        maxGCD = result;
-                        valueOfJthElement = secondArr[j];
-                        }
-                    }
-                if ( max < maxGCD )
-                    {
-                    finalResult = firstArr[i] + valueOfJthElement;
-                    }
+                numerator = x;
+                denominator = y;
                 }
-            return finalResult;
-            }
-
-        private static int GetGCD (int firstNumber, int secondNumber)
-            {
-            while ( true )
+            else
                 {
-                var remainder = firstNumber % secondNumber;
-
-                if ( remainder == 0 )
-                    return secondNumber;
-
-                firstNumber = secondNumber;
-                secondNumber = remainder;
+                numerator = y;
+                denominator = x;
                 }
+            do
+                {
+                remainder = numerator % denominator;
+                numerator = denominator;
+                denominator = remainder;
+                } while ( remainder != 0 );
+            return numerator;
             }
         }
     }

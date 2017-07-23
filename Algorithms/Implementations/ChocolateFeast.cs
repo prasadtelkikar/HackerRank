@@ -31,22 +31,17 @@ namespace Implementations
             int dollers = Convert.ToInt32(inputs[0]);
             int rateOfChocolate = Convert.ToInt32(inputs[1]);
             int tradeRate = Convert.ToInt32(inputs[2]);
-            bool flag = true;
-            int chocolateCount = 0;
-            int remainingWrappers = 0;
+            int wrappers = 0;
+            int result = 0;
             do
                 {
-                if ( chocolateCount == 0 || chocolateCount >= tradeRate )
-                    {
-                    chocolateCount += dollers / rateOfChocolate;
-                    //remainingWrappers = chocolateCount % tradeRate;
-                    dollers = chocolateCount;
-                    rateOfChocolate = tradeRate;
-                    }
-                else
-                    flag = false;
-                } while ( flag );
-            return chocolateCount;
+                wrappers = dollers / rateOfChocolate;
+                int remainingChocolate = dollers % rateOfChocolate;
+                dollers = wrappers + remainingChocolate;
+                rateOfChocolate = tradeRate;
+                result += wrappers;
+                } while ( wrappers != 0 && dollers >= tradeRate );
+            return result;
             }
         }
     }
