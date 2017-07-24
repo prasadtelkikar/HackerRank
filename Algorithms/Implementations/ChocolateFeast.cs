@@ -1,11 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+/*Sample Input 0:
+ * 3
+ * 10 2 5
+ * 12 4 4
+ * 6 2 2
+ * Sample Output 0:
+ * 6
+ * 3
+ * 5
+ */
 namespace Implementations
     {
+    /// <summary>
+    /// https://www.hackerrank.com/challenges/chocolate-feast
+    /// Chocolate Feast
+    /// </summary>
     public class ChocolateFeast
         {
         public static void Main (string[] args)
@@ -31,16 +41,28 @@ namespace Implementations
             int dollers = Convert.ToInt32(inputs[0]);
             int rateOfChocolate = Convert.ToInt32(inputs[1]);
             int tradeRate = Convert.ToInt32(inputs[2]);
-            int wrappers = 0;
-            int result = 0;
-            do
+
+            int result = dollers / rateOfChocolate;
+            int wrappers = result;
+
+            while ( wrappers >= tradeRate )
                 {
-                wrappers = dollers / rateOfChocolate;
-                int remainingChocolate = dollers % rateOfChocolate;
-                dollers = wrappers + remainingChocolate;
-                rateOfChocolate = tradeRate;
-                result += wrappers;
-                } while ( wrappers != 0 && dollers >= tradeRate );
+                int newWrappers = wrappers / tradeRate;
+                result += newWrappers;
+                int remainingChocolate = wrappers % tradeRate;
+                wrappers = newWrappers + remainingChocolate;
+                }
+
+            /*
+             * First failure approach
+                do
+                 {
+                 wrappers = dollers / rateOfChocolate;
+                 int remainingChocolate = dollers % rateOfChocolate;
+                 dollers = wrappers + remainingChocolate;
+                 rateOfChocolate = tradeRate;
+                 result += wrappers;
+                 } while ( wrappers != 0 && dollers >= tradeRate );*/
             return result;
             }
         }
