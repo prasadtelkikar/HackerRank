@@ -4,7 +4,6 @@ Incomplete problems:
     
 Todo or Saved challenges:
     - Magic Square Forming.
-    - Append and delete
     - Journey to the Moon
     - Coin change problem
     - Week of code 31: Spanning tree fraction 
@@ -17,3 +16,5 @@ Contests:
     Week of code 32:
         - Circular walk
         - GeometricTrick
+    Week of code 34:
+        Max GCD and sum

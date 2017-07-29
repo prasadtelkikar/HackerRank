@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Implementations.FlatLandSpaceStation</StartupObject>
+    <StartupObject>Implementations.LisaWorkbook</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -82,6 +82,7 @@
     <Compile Include="Cheated\ElectronicsShop.cs" />
     <Compile Include="FlatLandSpaceStation.cs" />
     <Compile Include="LibraryFines.cs" />
+    <Compile Include="LisaWorkbook.cs" />
     <Compile Include="MaximumDraws.cs" />
     <Compile Include="MigratoryBird.cs" />
     <Compile Include="MinimumDistance.cs" />
