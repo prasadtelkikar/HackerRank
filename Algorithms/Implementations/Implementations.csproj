@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Implementations.LisaWorkbook</StartupObject>
+    <StartupObject>Implementations.FairRotation</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -80,6 +80,7 @@
     <Compile Include="DivisiblePairsSum.cs" />
     <Compile Include="DrawingBook.cs" />
     <Compile Include="Cheated\ElectronicsShop.cs" />
+    <Compile Include="FairRotation.cs" />
     <Compile Include="FlatLandSpaceStation.cs" />
     <Compile Include="LibraryFines.cs" />
     <Compile Include="LisaWorkbook.cs" />
