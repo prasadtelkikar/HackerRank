@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Stack.GameOfTwoStacks</StartupObject>
+    <StartupObject>Stack.MaximumElements</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
