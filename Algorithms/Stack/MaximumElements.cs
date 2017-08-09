@@ -11,10 +11,11 @@ namespace Stack
         public static void Main (string[] args)
             {
             Stack<long> stack = new Stack<long>();
+            Stack<long> maxStorage = new Stack<long>();
+
             int size = Convert.ToInt16(Console.ReadLine());
             string[] inputs = new string[size];
             long max = int.MinValue;
-
             for ( int i = 0; i < size; i++ )
                 {
                 inputs[i] = Console.ReadLine();
@@ -28,22 +29,26 @@ namespace Stack
                 if ( option == 1 )
                     { 
                     long value = Convert.ToInt32(values[1]);
-                    if ( max < value )
-                        max = value;
-
                     stack.Push(value);
+                    long temp = stack.Peek();
+                    if ( value > max )
+                        {
+                        maxStorage.Push(value);
+                        max = value;
+                        }
                     }
                 else if ( stack.Count != 0 && option == 2 )
                     {
-                    stack.Pop();
+                    long temp = stack.Pop();
                     if ( stack.Count == 0 )
+                        {
+                        maxStorage.Clear();
                         max = int.MinValue;
-                    else
-                        max = stack.Max();
+                        }
                     }
                 else if ( option == 3 )
                     {
-                    Console.WriteLine(max);
+                    Console.WriteLine(maxStorage.Peek());
                     }
                 }
             Console.ReadKey();

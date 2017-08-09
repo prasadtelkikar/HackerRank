@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Implementations.FairRotation</StartupObject>
+    <StartupObject>Implementations.ManasaAndStones</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -84,6 +84,7 @@
     <Compile Include="FlatLandSpaceStation.cs" />
     <Compile Include="LibraryFines.cs" />
     <Compile Include="LisaWorkbook.cs" />
+    <Compile Include="ManasaAndStones.cs" />
     <Compile Include="MaximumDraws.cs" />
     <Compile Include="MigratoryBird.cs" />
     <Compile Include="MinimumDistance.cs" />
