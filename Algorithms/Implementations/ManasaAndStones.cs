@@ -1,11 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-
+/* Sample input 0:
+ * 2
+ * 3 
+ * 1
+ * 2
+ * 4
+ * 10
+ * 100
+ * Sample output 0:
+ * 2 3 4 
+ * 30 120 210 300
+ */
 namespace Implementations
     {
+    /// <summary>
+    /// Manasa and stones
+    /// https://www.hackerrank.com/challenges/manasa-and-stones
+    /// </summary>
     public class ManasaAndStones
         {
         public static void Main (string[] args)
@@ -17,8 +30,12 @@ namespace Implementations
                 int length = Convert.ToInt32(Console.ReadLine());
                 int startPoint = Convert.ToInt32(Console.ReadLine());
                 int endPoint = Convert.ToInt32(Console.ReadLine());
+                string output = "";
+                if ( startPoint < endPoint )
+                    output = GetFinalList(length - 1, startPoint, endPoint);
+                else
+                    output = GetFinalList(length - 1, endPoint, startPoint);
 
-                string output = GetFinalList(length - 1, startPoint, endPoint);
                 results.Add(output);
                 }
             foreach ( string item in results )
@@ -36,7 +53,7 @@ namespace Implementations
             sb.Append(lowerBound + " ");
             int diff = (upperBound - lowerBound) / (length);
             int temp = lowerBound;
-            while ( lowerBound < upperBound )
+            while ( lowerBound <= upperBound )
                 {
                 temp += diff;
                 sb.Append(temp + " ");

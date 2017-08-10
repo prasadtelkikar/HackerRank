@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Implementations.ManasaAndStones</StartupObject>
+    <StartupObject>Implementations.ConsecutiveOne_s</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -71,10 +71,12 @@
     <Compile Include="BonAppétit.cs" />
     <Compile Include="BreakingTheRecords.cs" />
     <Compile Include="CatAndMouse.cs" />
+    <Compile Include="CavityMap.cs" />
     <Compile Include="Cheated\DrawingBook.cs" />
     <Compile Include="ChocolateFeast.cs" />
     <Compile Include="CircularArrayRotation.cs" />
     <Compile Include="ClimbingTheLeaderboard.cs" />
+    <Compile Include="ConsecutiveOne%27s.cs" />
     <Compile Include="CountingValleys.cs" />
     <Compile Include="DayOfTheProgrammer.cs" />
     <Compile Include="DivisiblePairsSum.cs" />
