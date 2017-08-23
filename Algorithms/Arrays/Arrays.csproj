@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Arrays.DynamicArray</StartupObject>
+    <StartupObject>Arrays.ArrayManipulation</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="2D Array - DS.cs" />
     <Compile Include="AlgorithmicCrush.cs" />
+    <Compile Include="ArrayManipulation.cs" />
     <Compile Include="Big Sorting.cs" />
     <Compile Include="DynamicArray.cs" />
     <Compile Include="LeftRotation.cs" />
