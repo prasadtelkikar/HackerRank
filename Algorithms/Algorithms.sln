@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Implementations", "Implementations\Implementations.csproj", "{DD136212-70D9-4CC1-A65C-472029B92B64}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stack", "Stack\Stack.csproj", "{66BF007E-8757-4A84-A3A0-18F0795A95F4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Searching", "Searching\Searching.csproj", "{A3CDB0FB-4805-4764-8510-EB3CD7F40DE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strings", "Strings\Strings.csproj", "{8C3865C4-DA34-46F9-877E-F1236499341C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{A3CDB0FB-4805-4764-8510-EB3CD7F40DE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3CDB0FB-4805-4764-8510-EB3CD7F40DE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3CDB0FB-4805-4764-8510-EB3CD7F40DE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C3865C4-DA34-46F9-877E-F1236499341C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C3865C4-DA34-46F9-877E-F1236499341C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C3865C4-DA34-46F9-877E-F1236499341C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C3865C4-DA34-46F9-877E-F1236499341C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,5 +60,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E5FFD0F0-204C-42DA-93EB-69B519C6134D} = {6CFBE39B-66DC-4FAA-9CB4-90692547E356}
 		{66BF007E-8757-4A84-A3A0-18F0795A95F4} = {6CFBE39B-66DC-4FAA-9CB4-90692547E356}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C0BD9D9F-B4D5-4CD8-B002-F4E5173F32A5}
 	EndGlobalSection
 EndGlobal
