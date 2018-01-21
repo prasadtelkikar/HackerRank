@@ -1,16 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-
+/*
+ * Input 1:
+ * 11
+ * middle-Outz
+ * 2
+ * 
+ * Output 1:
+ * okffng-Qwvb
+ */
 namespace Strings
 {
+    /// <summary>
+    /// Ceasar_Cipher : Encryption and decryption of a string
+    /// </summary>
     class Caesar_Cipher
     {
         public static void Main(string[] args)
         {
-            //Console.WriteLine("Hi Prasad Welcome~back");
             int n = Convert.ToInt32(Console.ReadLine());
             string str = Console.ReadLine();
             int value = Convert.ToInt32(Console.ReadLine());
@@ -18,14 +25,30 @@ namespace Strings
             StringBuilder sb = new StringBuilder();
             foreach (char ch in str)
             {
-                int asciiValue = Convert.ToInt32(ch);
-                if ((asciiValue >= 97 && asciiValue <= 122) || (asciiValue >= 65 && asciiValue <= 90))
+                if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
                 {
-                    int result = asciiValue + value;
-                    if (result > 122 || (result > 90 && result < 96))
-                        result -= 26;
-                    sb.Append(Convert.ToChar(result));
+                    int result = Convert.ToInt32(ch) + value;
+                    char ch1 = (char)result;
+                    if ((ch >= 'A' && ch <= 'Z'))
+                    {
+                        do
+                        {
+                            if (result > 90)
+                                result -= 26;
+                        } while (result > 90);
 
+                    }
+                    if (ch >= 'a' && ch <= 'z')
+                    {
+                        do
+                        {
+                            if (result > 122)
+                                result -= 26;
+                        } while (result > 122);
+                    }
+
+                    ch1 = (char)result;
+                    sb.Append(ch1);
                 }
                 else
                     sb.Append(ch);
