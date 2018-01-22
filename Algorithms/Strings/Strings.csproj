@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Strings.CamelCase</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,7 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Caesar Cipher.cs" />
+    <Compile Include="CamelCase.cs" />
+    <Compile Include="Mars Exploration1.cs" />
+    <Compile Include="MarsExploration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SuperReducedString.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
