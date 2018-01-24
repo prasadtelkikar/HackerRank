@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Strings
 {
@@ -11,24 +8,44 @@ namespace Strings
         public static void Main(string[] args)
         {
             int inputs = Convert.ToInt32(Console.ReadLine());
-            Dictionary<char, int> countLetters = new Dictionary<char, int>();
+            Dictionary<char, bool> countLetters = new Dictionary<char, bool>();
             string aToz = "abcdefghijklmnopqrstuvwxyz";
 
             foreach (char ch in aToz)
-                countLetters.Add(ch, 0);
+                countLetters.Add(ch, false);
 
             for (int i = 0; i < inputs; i++)
             {
                 string inputString = Console.ReadLine();
-                foreach (char chq in inputString)
+                if(i == 0)
                 {
-                    if(countLetters.ContainsKey(chq))
-                        countLetters[chq]++;
+                    foreach (char ch in inputString)
+                    {
+                        countLetters[ch] = true;
+                    }
+                    foreach (char chq in aToz)
+                    {
+                        if (countLetters.ContainsKey(chq) && (!countLetters[chq]))
+                            countLetters.Remove(chq);
+                        else
+                            countLetters[chq] = false;
+                    }
                 }
-                foreach (char chq in aToz)
+                else
                 {
-                    if (countLetters.ContainsKey(chq) && countLetters[chq] != i + 1)
-                        countLetters.Remove(chq);
+                    foreach (char ch in inputString)
+                    {
+                        if(countLetters.ContainsKey(ch))
+                            countLetters[ch] = true;
+                    }
+                    foreach (char chq in aToz)
+                    {
+                        if (countLetters.ContainsKey(chq) && (!countLetters[chq]))
+                            countLetters.Remove(chq);
+                        else if(countLetters.ContainsKey(chq))
+                            countLetters[chq] = false;
+                    }
+
                 }
             }
 
