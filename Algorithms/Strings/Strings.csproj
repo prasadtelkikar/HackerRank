@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Strings.Pangram</StartupObject>
+    <StartupObject>Strings.AlternatingCharacters</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlternatingCharacters.cs" />
+    <Compile Include="BeautifulBinaryString.cs" />
     <Compile Include="Caesar Cipher.cs" />
     <Compile Include="CamelCase.cs" />
     <Compile Include="GemStone.cs" />
@@ -60,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ceasar_Cipher.txt" />
+    <Content Include="ToDo%27s.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

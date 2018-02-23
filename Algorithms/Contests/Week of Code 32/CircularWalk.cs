@@ -40,7 +40,7 @@ namespace Contests.Week_of_Code_32
                 //if(r[initial])
 
             }
-            Console.ReadKey();
+            //Console.ReadKey();
         }
     }
 }

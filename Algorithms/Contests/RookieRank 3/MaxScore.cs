@@ -15,7 +15,7 @@ namespace Contests.RookieRank_3
             long[] arr = Array.ConvertAll(arrString, Int64.Parse);
 
             Array.Sort(arr);
-            long maxValue = -1;
+            //long maxValue = -1;
             int middle = (size) / 2;
             long runningScore = 0;
             long score = 0;

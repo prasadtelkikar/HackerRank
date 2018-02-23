@@ -12,7 +12,7 @@ namespace Strings
         {
             string str = Console.ReadLine();
             StringBuilder result = new StringBuilder("");
-            bool isTrue = false;
+            //bool isTrue = false;
             int count = 0;
             do
             {
