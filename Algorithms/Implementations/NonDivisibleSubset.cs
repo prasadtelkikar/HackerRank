@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//TODO: Incomplete.
+//TODO: Incomplete.Do it tomorrow...25/02/2018
 namespace Implementations
 {
     class NonDivisibleSubset
