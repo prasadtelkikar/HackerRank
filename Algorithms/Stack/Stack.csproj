@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Stack.MaximumElements</StartupObject>
+    <StartupObject>Stack.LargestRectangle</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,6 +49,7 @@
     <Compile Include="BalancedBrackets.cs" />
     <Compile Include="EqualStacks.cs" />
     <Compile Include="GameOfTwoStacks.cs" />
+    <Compile Include="LargestRectangle.cs" />
     <Compile Include="MaximumElements.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

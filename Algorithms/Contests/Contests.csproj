@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Contests.Week_of_Code_34.MaxGcdAndSum</StartupObject>
+    <StartupObject>Contests.Week_of_Code_37.SimpleLanguage</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -62,6 +62,8 @@
     <Compile Include="Week of code 33\TwinArrays.cs" />
     <Compile Include="Week of Code 34\MaxGcdAndSum.cs" />
     <Compile Include="Week of Code 34\OnceInTram.cs" />
+    <Compile Include="Week of Code 37\AverageRating.cs" />
+    <Compile Include="Week of Code 37\SimpleLanguage.cs" />
     <Compile Include="Week of Codes 31\AccurateSorting.cs" />
     <Compile Include="Week of Codes 31\BeautifulWord.cs" />
     <Compile Include="Week of Codes 31\SpanningTreeFraction.cs" />
