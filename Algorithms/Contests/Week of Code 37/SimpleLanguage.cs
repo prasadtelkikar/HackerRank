@@ -12,12 +12,12 @@ namespace Contests.Week_of_Code_37
         public static void Main(string[] args)
         {
             int n = Convert.ToInt32(Console.ReadLine());
-            long result = MaximumProgramValue(n);
+            BigInteger result = MaximumProgramValue(n);
             Console.WriteLine(result);
             Console.ReadKey();
         }
 
-        private static long MaximumProgramValue(int n)
+        private static BigInteger MaximumProgramValue(int n)
         {
             BigInteger maxValue = new BigInteger();
             BigInteger x = new BigInteger();
