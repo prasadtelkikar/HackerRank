@@ -15,7 +15,6 @@ namespace Strings
             
             int n = int.Parse(Console.ReadLine());
             string input = Console.ReadLine();
-
             var watch = Stopwatch.StartNew();
             int answer = MinimumNumber(n, input);
             watch.Stop();
