@@ -85,6 +85,7 @@
     <Compile Include="FairRotation.cs" />
     <Compile Include="FlatLandSpaceStation.cs" />
     <Compile Include="FormingAMagicSquare.cs" />
+    <Compile Include="HalloweenSale.cs" />
     <Compile Include="LibraryFines.cs" />
     <Compile Include="LisaWorkbook.cs" />
     <Compile Include="ManasaAndStones.cs" />

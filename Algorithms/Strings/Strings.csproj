@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Strings.AlternatingCharacters</StartupObject>
+    <StartupObject>Strings.StrongPassword</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,7 +46,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlternatingCharacters.cs" />
-    <Compile Include="BeautifulBinaryString.cs" />
     <Compile Include="Caesar Cipher.cs" />
     <Compile Include="CamelCase.cs" />
     <Compile Include="GemStone.cs" />
@@ -55,7 +54,9 @@
     <Compile Include="MarsExploration.cs" />
     <Compile Include="Pangram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StrongPassword.cs" />
     <Compile Include="SuperReducedString.cs" />
+    <Compile Include="TwoStrings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

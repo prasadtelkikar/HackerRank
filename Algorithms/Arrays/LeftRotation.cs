@@ -25,9 +25,11 @@ namespace Arrays
 
             string[] arrString = Console.ReadLine().Split(' ');
             int[] arr = Array.ConvertAll(arrString, Int32.Parse);
-            int[] leftRotatedArray = new int[sizeShift[0]];
 
-            for (int i = 0; i < sizeShift[0]; i++)
+            var count = arr.Length;
+            int[] leftRotatedArray = new int[count];
+
+            for (int i = 0; i < count; i++)
             {
                 leftRotatedArray[i] = arr[(i + sizeShift[1]) % sizeShift[0]];
             }

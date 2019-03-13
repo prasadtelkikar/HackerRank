@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Stack.LargestRectangle</StartupObject>
+    <StartupObject>Stack.MaximumElements</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -52,6 +52,7 @@
     <Compile Include="LargestRectangle.cs" />
     <Compile Include="MaximumElements.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Unlocked Testcases\MaximumElementTestcase8Inputs.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
