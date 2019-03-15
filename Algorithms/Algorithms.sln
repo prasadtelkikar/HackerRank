@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Searching", "Searching\Sear
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strings", "Strings\Strings.csproj", "{8C3865C4-DA34-46F9-877E-F1236499341C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictionaryAndHashTables", "DictionaryAndHashTables\DictionaryAndHashTables.csproj", "{A07EF98E-D5AA-4965-9234-2D61809C3C5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{8C3865C4-DA34-46F9-877E-F1236499341C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C3865C4-DA34-46F9-877E-F1236499341C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C3865C4-DA34-46F9-877E-F1236499341C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A07EF98E-D5AA-4965-9234-2D61809C3C5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A07EF98E-D5AA-4965-9234-2D61809C3C5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A07EF98E-D5AA-4965-9234-2D61809C3C5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A07EF98E-D5AA-4965-9234-2D61809C3C5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
