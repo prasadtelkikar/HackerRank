@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>DictionaryAndHashTables.RansomNotes</StartupObject>
+    <StartupObject>DictionaryAndHashTables.CountTriplets</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CountTriplets.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RansomNotes.cs" />
   </ItemGroup>
