@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Sorting.MarkAndToys</StartupObject>
+    <StartupObject>Sorting.BubbleSort</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbsoluteDifference.cs" />
+    <Compile Include="BubbleSort.cs" />
     <Compile Include="Find The Point.cs" />
     <Compile Include="Insertion Sort - Part 1.cs" />
     <Compile Include="Luck Balance.cs" />
