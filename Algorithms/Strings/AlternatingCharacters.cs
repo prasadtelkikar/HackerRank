@@ -15,17 +15,10 @@ namespace Strings
 
             for (int i = 0; i < input; i++)
             {
-                int count = 0;
                 string str = Console.ReadLine();
-                for (int j = 0; j < str.Length - 1; j++)
-                {
-                    if (str[j] == str[j + 1])
-                    {
-                        str.Remove(j, 1);
-                        count++;
-                    }
-                }
-                outputs.Add(count);
+                string temp = str.Substring(0, str.Length - 1);
+                var a = new string(temp.Where((c, k) => c == str[k + 1]).ToArray());
+                outputs.Add(a.Length);
             }
 
             foreach (int output in outputs)
