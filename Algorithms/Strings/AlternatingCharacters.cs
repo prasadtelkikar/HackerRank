@@ -16,13 +16,16 @@ namespace Strings
             for (int i = 0; i < input; i++)
             {
                 string str = Console.ReadLine();
+
                 string temp = str.Substring(0, str.Length - 1);
                 var a = new string(temp.Where((c, k) => c == str[k + 1]).ToArray());
+
                 outputs.Add(a.Length);
             }
 
             foreach (int output in outputs)
                 Console.WriteLine(output);
+
             Console.ReadKey();
         }
     }
