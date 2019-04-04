@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Strings.AlternatingCharacters</StartupObject>
+    <StartupObject>Strings.MakingAnagrams</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -50,6 +50,7 @@
     <Compile Include="CamelCase.cs" />
     <Compile Include="GemStone.cs" />
     <Compile Include="LoveLetterMystery.cs" />
+    <Compile Include="MakingAnagrams.cs" />
     <Compile Include="Mars Exploration1.cs" />
     <Compile Include="MarsExploration.cs" />
     <Compile Include="Pangram.cs" />
