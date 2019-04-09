@@ -18,7 +18,7 @@ namespace Miscellaneous
                 result.Add(IsPrimaryNumber(number));
             }
             foreach (var item in result)
-            {
+            {   
                 Console.WriteLine(item ? "Prime" : "Not prime");
             }
 
